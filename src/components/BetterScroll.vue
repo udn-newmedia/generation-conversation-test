@@ -28,7 +28,7 @@ export default {
 }
 .content{
   width: 100%;
-  height: 180vh;
+  height: 250vh;
   /* height: 100%; */
   overflow: auto;
 }

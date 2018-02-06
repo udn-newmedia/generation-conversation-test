@@ -19,7 +19,8 @@ import EmbededVideo from 'udn-newmedia-vue-components/components/EmbededVideo'
 import BetterScroll from '@/components/BetterScroll'
 import Hashtagblock from '@/components/Hashtagblock'
 import Share from '@/components/Share'
-import miao from '@/assets/miao.mp4'
+// import miao from '@/assets/miao.mp4'
+import miao from '@/assets/Ubrandstudio.mp4'
 
 export default {
   name: 'App',
