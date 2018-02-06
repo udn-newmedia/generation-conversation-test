@@ -29,7 +29,7 @@ export default {
     overflow: auto;
   }
 
-  .innerRegion::-webkit-scrollbar { 
-    display: none; 
-  }  
+  .innerRegion::-webkit-scrollbar {
+    display: none;
+  }
 </style>

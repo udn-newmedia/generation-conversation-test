@@ -11,10 +11,11 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "udn-newmedia-vue-components": "^1.2.3",
-    "vue": "^2.5.2",
+    "better-scroll": "^1.8.0",
     "node-sass": "^4.7.2",
-    "sass-loader": "^6.0.6"
+    "sass-loader": "^6.0.6",
+    "udn-newmedia-vue-components": "^1.2.3",
+    "vue": "^2.5.2"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
