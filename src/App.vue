@@ -31,8 +31,9 @@ export default {
         {
           time: '01:22',
           tag: '草莓族',
-          words: '(一)1980年代的報紙上面的文章在說，年輕人是草莓族1980年代年輕人是誰就是我爸媽。',
-          picSeeLink: 'https://lnk.pics/56WEH'
+          words: '為什麼你們現在不能成功，一定是因為你們不能吃苦，這個邏輯是壓在我們身上。——苗博雅',
+          picSeeLink: 'https://lnk.pics/5725Z'
+          // picSeeLink: 'https://lnk.pics/572CM'
         },
         {
           time: '02:04',
