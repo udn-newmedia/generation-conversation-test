@@ -31,32 +31,38 @@ export default {
         {
           time: '01:22',
           tag: '草莓族',
-          words: '(一)1980年代的報紙上面的文章在說，年輕人是草莓族1980年代年輕人是誰就是我爸媽。'
+          words: '(一)1980年代的報紙上面的文章在說，年輕人是草莓族1980年代年輕人是誰就是我爸媽。',
+          picSeeLink: 'https://lnk.pics/56WEH'
         },
         {
           time: '02:04',
           tag: '你們不能吃苦',
-          words: '(二)1980年代的報紙上面的文章在說，年輕人是草莓族1980年代年輕人是誰就是我爸媽。'
+          words: '(二)1980年代的報紙上面的文章在說，年輕人是草莓族1980年代年輕人是誰就是我爸媽。',
+          picSeeLink: 'https://lnk.pics/56WL7'
         },
         {
           time: '02:30',
           tag: '這叫不努力',
-          words: '(三)1980年代的報紙上面的文章在說，年輕人是草莓族1980年代年輕人是誰就是我爸媽。'
+          words: '(三)1980年代的報紙上面的文章在說，年輕人是草莓族1980年代年輕人是誰就是我爸媽。',
+          picSeeLink: 'https://lnk.pics/56WLM'
         },
         {
           time: '03:45',
           tag: '1小時140一碗拉麵260',
-          words: '(四)1980年代的報紙上面的文章在說，年輕人是草莓族1980年代年輕人是誰就是我爸媽。'
+          words: '(四)1980年代的報紙上面的文章在說，年輕人是草莓族1980年代年輕人是誰就是我爸媽。',
+          picSeeLink: 'https://lnk.pics/56WMF'
         },
         {
           time: '04:08',
           tag: '每天來點負能量',
-          words: '(五)1980年代的報紙上面的文章在說，年輕人是草莓族1980年代年輕人是誰就是我爸媽。'
+          words: '(五)1980年代的報紙上面的文章在說，年輕人是草莓族1980年代年輕人是誰就是我爸媽。',
+          picSeeLink: 'https://lnk.pics/56WMW'
         },
         {
           time: '05:07',
           tag: '超正向好嗎',
-          words: '(六)1980年代的報紙上面的文章在說，年輕人是草莓族1980年代年輕人是誰就是我爸媽。'
+          words: '(六)1980年代的報紙上面的文章在說，年輕人是草莓族1980年代年輕人是誰就是我爸媽。',
+          picSeeLink: 'https://lnk.pics/56WN6'
         }
       ]
     }
@@ -75,5 +81,8 @@ export default {
   position: relative;
   height: 100vh;
   overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="Share">
     <span @click="expand" style="z-index: 1;"><i class="fas fa-share"></i></span>
-    <span :class="{'abs':!isExpand}" @click="fbshare"><i class="fab fa-facebook-f"></i></span>
+    <span :class="{'abs':!isExpand}" @click="fbshareQuote"><i class="fab fa-facebook-f"></i></span>
     <span :class="{'abs':!isExpand}"><i class="fab fa-line"></i></span>
     <span :class="{'abs':!isExpand}"><i class="fab fa-instagram"></i></span>
   </div>
@@ -11,7 +11,7 @@
 /* global FB */
 export default {
   name: 'Share',
-  props: ['hashtag', 'words'],
+  props: ['hashtag', 'words', 'link'],
   data: function () {
     return {
       isExpand: false
@@ -21,12 +21,11 @@ export default {
     expand: function () {
       this.isExpand = !this.isExpand
     },
-    fbshare: function () {
+    fbshareQuote: function () {
+      //  cons: Can only show small thumbnails
       FB.ui({
         method: 'share',
-        href: location.href,
-        // hashtag: '#facebook',
-        // quote: 'this is quote !'
+        href: this.link,
         hashtag: '#' + this.hashtag,
         quote: this.words
       }, function (response) {})

@@ -9,7 +9,7 @@
       </p>
     </div>
     <div class="words">{{content.words}}</div>
-    <Share :hashtag="content.tag" :words="content.words"></Share>
+    <Share :hashtag="content.tag" :words="content.words" :link="content.picSeeLink"></Share>
   </div>
 </template>
 
