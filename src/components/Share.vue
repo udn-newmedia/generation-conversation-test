@@ -45,7 +45,7 @@ export default {
         FB.ui({
           method: 'send',
           link: this.link
-        })        
+        })
       }
     }
   }
