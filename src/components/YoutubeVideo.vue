@@ -22,18 +22,18 @@ export default {
   },
   mounted: function () {
     // 2. This code loads the IFrame Player API code asynchronously.
-    var tag = document.createElement('script')
-    tag.src = 'https://www.youtube.com/iframe_api'
-    var firstScriptTag = document.getElementsByTagName('script')[0]
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag)
+    // var tag = document.createElement('script')
+    // tag.src = 'https://www.youtube.com/iframe_api'
+    // var firstScriptTag = document.getElementsByTagName('script')[0]
+    // firstScriptTag.parentNode.insertBefore(tag, firstScriptTag)
   },
   methods: {
-    // updateBar: function () {
-    //   if (YT.PlayerState.PLAYING) {
-    //     console.log(player.getCurrentTime())
-    //     setTimeout(updateBar, 200)
-    //   }
-    // }
+    updateBar: function () {
+      if (YT.PlayerState.PLAYING) {
+        console.log(player.getCurrentTime())
+        setTimeout(updateBar, 200)
+      }
+    },
     onYouTubeIframeAPIReady: function () {
       player = new YT.Player('player', {
         height: '390',

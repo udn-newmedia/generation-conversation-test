@@ -1,17 +1,14 @@
 <template>
   <div id="app">
     <Head-Bar MenuSlideFrom="top" background-color="#ffcf31" color="#575755"></Head-Bar>
-    <EmbededVideo :src="miao" style="margin-top: 46px;" :playingTime="videocurTime"></EmbededVideo>
-    <!-- <YoutubeVideo :dataSrc="videolink" style="margin-top: 46px;"></YoutubeVideo> -->
+    <!-- <EmbededVideo :src="miao" style="margin-top: 46px;" :playingTime="videocurTime"></EmbededVideo> -->
+    <YoutubeVideo :dataSrc="youtubelink" style="margin-top: 46px;"></YoutubeVideo>
     <div class="clearblock" style="width: 100%; height: 10%;"></div>
     <BetterScroll>
       <!-- <Timeline :photo="head" :percent="videocurPercent"></Timeline> -->
       <ul class="hashtagblocks" v-for="(hashtag, index) in hashtaglist" v-bind:key="hashtag.tag">
         <li>
           <NewTimeline :dataSrc="head" :index="index" :list="hashtaglist"></NewTimeline>
-          <!-- <div class="timeline">
-            <img :src="dataSrc" :class="{'active': isActive(index)}">
-          </div> -->
           <div class="tagsandblocks">
             <p>{{hashtag.time}}</p>
             <span class="hashtag"
@@ -46,7 +43,7 @@ export default {
     return {
       head: head,
       miao: 'https://udn.com/upf/newmedia/2018_data/generation_conversation_0208/miao50.mp4',
-      videolink: 'https://www.youtube.com/embed/blvoqfU2Tx8?rel=0',
+      youtubelink: 'https://www.youtube.com/embed/blvoqfU2Tx8?rel=0',
       // videolink: 'https://www.youtube.com/embed/M7lc1UVf-VE?rel=0',
       videocurTime: 0,
       videocurPercent: 0,
