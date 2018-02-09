@@ -22,12 +22,10 @@ export default {
   methods: {
     getcurrentClip: function (progress) {
       let curTime = progress.percent / 100 * progress.time
-      if (curTime < this.list[0].timelast) {
-        this.currentClip = 0
-      } else if (curTime >= this.list[0].timelast && curTime < this.list[1].timelast) {
-        this.currentClip = 1
-      } else {
-        this.currentClip = 2
+      for (let i = 0; i < this.list.length; i++) {
+        if (curTime > this.list[i].timelast) {
+          this.currentClip = i
+        }
       }
     }
   }
