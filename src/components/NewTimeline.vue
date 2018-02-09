@@ -10,7 +10,8 @@ export default {
   props: ['dataSrc', 'index', 'list'],
   data: function () {
     return {
-      currentClip: 0
+      currentClip: 0,
+      curTime: 0
     }
   },
   created: function () {
@@ -21,9 +22,9 @@ export default {
   },
   methods: {
     getcurrentClip: function (progress) {
-      let curTime = progress.percent / 100 * progress.time
+      this.curTime = progress.percent / 100 * progress.time
       for (let i = 0; i < this.list.length; i++) {
-        if (curTime > this.list[i].timelast) {
+        if (this.curTime > this.list[i].timelast) {
           this.currentClip = i
         }
       }
