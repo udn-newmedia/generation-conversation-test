@@ -2,10 +2,11 @@
   <div id="app">
     <Head-Bar MenuSlideFrom="top" background-color="#ffcf31" color="#575755"></Head-Bar>
     <!-- <EmbededVideo :src="miao" style="margin-top: 46px;" :playingTime="videocurTime"></EmbededVideo> -->
-    <YoutubeVideo :dataSrc="youtubelink" style="margin-top: 46px;"></YoutubeVideo>
+    <!-- <youtube video-id="blvoqfU2Tx8" ref="youtube" @playing="playing"></youtube> -->
+    <YoutubeVideo :dataSrc="youtubelink" style="margin-top: 46px;" :timestamp="playingtime"></YoutubeVideo>
     <div class="clearblock" style="width: 100%; height: 10%;"></div>
     <BetterScroll>
-      <!-- <Timeline :photo="head" :percent="videocurPercent"></Timeline> -->
+      <Timeline :photo="head" :percent="videocurPercent"></Timeline>
       <ul class="hashtagblocks" v-for="(hashtag, index) in hashtaglist" v-bind:key="hashtag.tag">
         <li>
           <NewTimeline :dataSrc="head" :index="index" :list="hashtaglist"></NewTimeline>
@@ -28,6 +29,7 @@
 <script>
 import HeadBar from 'udn-newmedia-vue-components/src/components/HeadBar'
 import EmbededVideo from 'udn-newmedia-vue-components/components/EmbededVideo'
+// import youtube from 'vue-youtube'
 import Timeline from '@/components/Timeline'
 import NewTimeline from '@/components/NewTimeline'
 import BetterScroll from '@/components/BetterScroll'
@@ -43,11 +45,13 @@ export default {
     return {
       head: head,
       miao: 'https://udn.com/upf/newmedia/2018_data/generation_conversation_0208/miao50.mp4',
-      youtubelink: 'https://www.youtube.com/embed/blvoqfU2Tx8?rel=0',
-      // videolink: 'https://www.youtube.com/embed/M7lc1UVf-VE?rel=0',
+      // youtubelink: 'https://www.youtube.com/embed/blvoqfU2Tx8?rel=0&t=0m38s', //cannot use
+      // youtubelink: 'https://www.youtube.com/watch?v=blvoqfU2Tx8&rel=0&t=0m38s',
+      youtubelink: 'https://www.youtube.com/watch?v=blvoqfU2Tx8&rel=0',
       videocurTime: 0,
       videocurPercent: 0,
       currentClip: 0,
+      playingtime: null,
       hashtaglist: [
         {
           time: '01:22',
@@ -101,9 +105,12 @@ export default {
     }
   },
   computed: {
+    player () {
+      return this.$refs.youtube.player
+    }
   },
   components: {
-    HeadBar, EmbededVideo, BetterScroll, Tagblock, Share, Timeline, YoutubeVideo, NewTimeline
+    HeadBar, EmbededVideo, BetterScroll, Tagblock, Share, Timeline, NewTimeline, YoutubeVideo
   },
   created: function () {
     this.$eventHub.$on('progress-change', this.progressIndicator)
@@ -120,6 +127,7 @@ export default {
     clickhashtag: function (hashtag) {
       hashtag.isopen = !hashtag.isopen
       this.videocurTime = hashtag.timelast
+      this.playingtime = hashtag.timelast.toString()
     },
     progressIndicator: function (progress) {
       // if (progress.time) {
@@ -145,6 +153,12 @@ export default {
       } else {
         return false
       }
+    },
+    playVideo: function () {
+      this.player.playVideo()
+    },
+    playing: function () {
+      console.log('we are watching!!!')
     }
   }
 }

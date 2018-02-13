@@ -22,14 +22,15 @@ export default {
 
 <style scoped>
 .wrapper{
-  width: 100%;
+  width: 80%;
   height: 100vh;
   overflow-y: hidden;
+  margin: 0 auto;
 }
 .content{
   width: 100%;
-  height: 300vh;
-  /* height: 100%; */
+  /* height: 300vh; */
+  height: 200vh;
   overflow: auto;
 }
 </style>

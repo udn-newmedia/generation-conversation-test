@@ -15,7 +15,8 @@
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.6",
     "udn-newmedia-vue-components": "^1.2.3",
-    "vue": "^2.5.2"
+    "vue": "^2.5.2",
+    "vue-youtube": "^1.2.5"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
